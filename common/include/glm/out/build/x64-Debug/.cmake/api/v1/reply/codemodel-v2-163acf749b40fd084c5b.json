@@ -1,0 +1,38 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/Fanshawe/Fanshawe Classes/Fall 2021/INFO6028 Graphics 1/repos/ILoveOpenGL/common/include/glm/out/build/x64-Debug",
+		"source" : "F:/Fanshawe/Fanshawe Classes/Fall 2021/INFO6028 Graphics 1/repos/ILoveOpenGL/common/include/glm"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

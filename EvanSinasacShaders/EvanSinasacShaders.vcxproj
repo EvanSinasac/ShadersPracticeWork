@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b69181c1-96b1-4bdb-bd99-ab830f860333}</ProjectGuid>
+    <RootNamespace>EvanSinasacShaders</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)common\include;$(ProjectDir)include;$(SolutionDir)common\glew\include;$(SolutionDir)common\FreeImage\include;$(SolutionDir)common\assimp\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)common\lib\x64\debug;$(SolutionDir)common\glew\lib\$(Platform);$(SolutionDir)common\FreeImage\lib\$(Platform)\$(Configuration);$(SolutionDir)common\assimp\lib\$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)common\include;$(SolutionDir)common\glew\include;$(SolutionDir)common\FreeImage\include;$(SolutionDir)common\assimp\include;$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)common\lib\x64\release\;$(SolutionDir)common\assimp\lib\$(Platform)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))";WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))";WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))";_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;fmod_vc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glew32s.lib;OpenGL32.lib;assimp-vc142-mtd.lib;FreeImaged.lib;rssgl.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)common\lib\x64\debug\\*.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))";NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;fmod_vc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glew32s.lib;OpenGL32.lib;assimp-vc142-mt.lib;FreeImage.lib;rssgl.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)common\lib\x64\release\\*.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\glad.c" />
+    <ClCompile Include="BMPImage.cpp" />
+    <ClCompile Include="cBedObject.cpp" />
+    <ClCompile Include="cBookshelfObject.cpp" />
+    <ClCompile Include="cChairObject.cpp" />
+    <ClCompile Include="cCrystal01Object.cpp" />
+    <ClCompile Include="cCrystal02Object.cpp" />
+    <ClCompile Include="cDungeonMeshBuilder.cpp" />
+    <ClCompile Include="cEntityBuilder.cpp" />
+    <ClCompile Include="cFBO\cFBO.cpp" />
+    <ClCompile Include="cFireParticle.cpp" />
+    <ClCompile Include="cFootprints.cpp" />
+    <ClCompile Include="cFSMEntity.cpp" />
+    <ClCompile Include="cGLFWKeyboadModifiers.cpp" />
+    <ClCompile Include="cLightHelper.cpp" />
+    <ClCompile Include="cLightManager.cpp" />
+    <ClCompile Include="cListeningEnemy.cpp" />
+    <ClCompile Include="cMediator.cpp" />
+    <ClCompile Include="cMediator_Imp.cpp" />
+    <ClCompile Include="cMesh.cpp" />
+    <ClCompile Include="cPlayerEntity.cpp" />
+    <ClCompile Include="cShader.cpp" />
+    <ClCompile Include="cShaderManager.cpp" />
+    <ClCompile Include="cTableObject.cpp" />
+    <ClCompile Include="cTorchObject.cpp" />
+    <ClCompile Include="cTreasureObject.cpp" />
+    <ClCompile Include="cVAOManager.cpp" />
+    <ClCompile Include="cWanderEnemy.cpp" />
+    <ClCompile Include="cWardrobeObject.cpp" />
+    <ClCompile Include="DrawObject_function.cpp" />
+    <ClCompile Include="FSMState.cpp" />
+    <ClCompile Include="FSMSystem.cpp" />
+    <ClCompile Include="GatherState.cpp" />
+    <ClCompile Include="GLFW_error_callback.cpp" />
+    <ClCompile Include="GLFW_key_callback.cpp" />
+    <ClCompile Include="globalThings.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="GraphSearches.cpp" />
+    <ClCompile Include="IdleState.cpp" />
+    <ClCompile Include="InputHandling.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main_Functions.cpp" />
+    <ClCompile Include="Main_Load_Functions.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="ReturnState.cpp" />
+    <ClCompile Include="sApproachState.cpp" />
+    <ClCompile Include="sAttackState.cpp" />
+    <ClCompile Include="SearchState.cpp" />
+    <ClCompile Include="sEnclosedWanderState.cpp" />
+    <ClCompile Include="sExitMazeState.cpp" />
+    <ClCompile Include="sFSMState.cpp" />
+    <ClCompile Include="sFSMSystem.cpp" />
+    <ClCompile Include="Shutdown.cpp" />
+    <ClCompile Include="sIdleState.cpp" />
+    <ClCompile Include="src\physics\cParticle.cpp" />
+    <ClCompile Include="src\physics\cParticleContact.cpp" />
+    <ClCompile Include="src\physics\cParticleContactResolver.cpp" />
+    <ClCompile Include="src\physics\cParticleForceRegistry.cpp" />
+    <ClCompile Include="src\physics\cParticleWorld.cpp" />
+    <ClCompile Include="src\physics\particle_constraints.cpp" />
+    <ClCompile Include="src\physics\particle_contact_generators.cpp" />
+    <ClCompile Include="src\physics\random_helpers.cpp" />
+    <ClCompile Include="StartUp.cpp" />
+    <ClCompile Include="sWanderState.cpp" />
+    <ClCompile Include="TextureMapping\C24BitBMPpixel.cpp" />
+    <ClCompile Include="TextureMapping\cBasicTextureManager.cpp" />
+    <ClCompile Include="TextureMapping\CTextureFromBMP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BMPImage.h" />
+    <ClInclude Include="cBedObject.h" />
+    <ClInclude Include="cBookshelfObject.h" />
+    <ClInclude Include="cChairObject.h" />
+    <ClInclude Include="cCrystal01Object.h" />
+    <ClInclude Include="cCrystal02Object.h" />
+    <ClInclude Include="cDungeonMeshBuilder.h" />
+    <ClInclude Include="cEntityBuilder.h" />
+    <ClInclude Include="cFBO\cFBO.h" />
+    <ClInclude Include="cFireParticle.h" />
+    <ClInclude Include="cFootprints.h" />
+    <ClInclude Include="cFSMEntity.h" />
+    <ClInclude Include="cLightHelper.h" />
+    <ClInclude Include="cLightManager.h" />
+    <ClInclude Include="cListeningEnemy.h" />
+    <ClInclude Include="cMediator.h" />
+    <ClInclude Include="cMediator_Imp.h" />
+    <ClInclude Include="cMesh.h" />
+    <ClInclude Include="cPlayerEntity.h" />
+    <ClInclude Include="cShaderManager.h" />
+    <ClInclude Include="cTableObject.h" />
+    <ClInclude Include="cTorchObject.h" />
+    <ClInclude Include="cTreasureObject.h" />
+    <ClInclude Include="cVAOManager.h" />
+    <ClInclude Include="cWanderEnemy.h" />
+    <ClInclude Include="cWardrobeObject.h" />
+    <ClInclude Include="FSMState.h" />
+    <ClInclude Include="FSMSystem.h" />
+    <ClInclude Include="GatherState.h" />
+    <ClInclude Include="GLCommon.h" />
+    <ClInclude Include="GLMCommon.h" />
+    <ClInclude Include="globalThings.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="IdleState.h" />
+    <ClInclude Include="iEntity.h" />
+    <ClInclude Include="iMediator.h" />
+    <ClInclude Include="iMessage.h" />
+    <ClInclude Include="include\physics\cParticle.h" />
+    <ClInclude Include="include\physics\cParticleContact.h" />
+    <ClInclude Include="include\physics\cParticleContactResolver.h" />
+    <ClInclude Include="include\physics\cParticleForceRegistry.h" />
+    <ClInclude Include="include\physics\cParticleWorld.h" />
+    <ClInclude Include="include\physics\iParticleContactGenerator.h" />
+    <ClInclude Include="include\physics\iParticleForceGenerator.h" />
+    <ClInclude Include="include\physics\particle_constraints.h" />
+    <ClInclude Include="include\physics\particle_contact_generators.h" />
+    <ClInclude Include="include\physics\random_helpers.h" />
+    <ClInclude Include="MapInfo.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="ReturnState.h" />
+    <ClInclude Include="sApproachState.h" />
+    <ClInclude Include="sAttackState.h" />
+    <ClInclude Include="SearchState.h" />
+    <ClInclude Include="sEnclosedWanderState.h" />
+    <ClInclude Include="sExitMazeState.h" />
+    <ClInclude Include="sFSMState.h" />
+    <ClInclude Include="sFSMSystem.h" />
+    <ClInclude Include="sIdleState.h" />
+    <ClInclude Include="sVertex_types.h" />
+    <ClInclude Include="sWanderState.h" />
+    <ClInclude Include="TextureMapping\C24BitBMPpixel.h" />
+    <ClInclude Include="TextureMapping\cBasicTextureManager.h" />
+    <ClInclude Include="TextureMapping\CTextureFromBMP.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\fragShader_01.glsl" />
+    <None Include="assets\shaders\geomShader.glsl" />
+    <None Include="assets\shaders\vertShader_01.glsl" />
+    <None Include="assets\The Catacombs of Horrendous Devastation 01 - Converted.tsv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="assets\audio\audioList.txt" />
+    <Text Include="assets\lights.txt" />
+    <Text Include="assets\worldFile.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

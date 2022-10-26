@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BMPLoader %28James Kelly%29">
+      <UniqueIdentifier>{af34d348-60d4-40e2-aacb-b25b819d69d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Builders">
+      <UniqueIdentifier>{10f5d6fc-ca5c-4147-9761-c00918519e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities %28Objects%29">
+      <UniqueIdentifier>{c75817e6-9f2c-4ffb-adae-3994f8584072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FBO %28Frame Buffer Object%29">
+      <UniqueIdentifier>{c0185e53-8a17-44ce-9b79-6cd70b3d9bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Finite State Machine">
+      <UniqueIdentifier>{9d792c76-8aea-478d-b420-bd04d7cd11b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{6134c0ab-d9f6-4b41-89bd-caad4ae53b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph Node Search">
+      <UniqueIdentifier>{1e896204-f077-49e0-a9a8-58fe0c2b41b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{01f0f203-0bc7-4040-976a-b4c3342b827a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light Manager">
+      <UniqueIdentifier>{2a3cc133-928e-4eb3-a374-a36d156a1045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mediator">
+      <UniqueIdentifier>{99f862ad-758b-4d39-aa37-691b048406b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Meshes">
+      <UniqueIdentifier>{46ea4daa-f7c8-417a-86b8-2ce2df4c2df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle Physics">
+      <UniqueIdentifier>{53cb1f8b-9660-40a8-a96f-a6d9606540aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderManager">
+      <UniqueIdentifier>{bb33486e-1bdd-4df6-a62c-08ef8fa95c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture Manager">
+      <UniqueIdentifier>{e8c0b771-63a8-4635-bfe8-a7ed79474179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities %28Objects%29\Entities">
+      <UniqueIdentifier>{59ecc120-3c79-4ec6-ab27-ccd4fb4bb94d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities %28Objects%29\Objects">
+      <UniqueIdentifier>{e133c52a-5930-470e-8aad-4cefa88338d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities %28Objects%29\Entities\Enemy FSM System">
+      <UniqueIdentifier>{06b5f111-95bb-4450-b185-e95ef1f4f036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities %28Objects%29\Entities\Enemy FSM System\sStates">
+      <UniqueIdentifier>{841e5d52-b007-48e5-89d1-21c9e753556b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Finite State Machine\States %28A.I. Project Specific%29">
+      <UniqueIdentifier>{68136711-3251-4ef0-a8db-11fc0705826d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Meshes\VAOManager">
+      <UniqueIdentifier>{07310999-9fec-4afe-b818-1be9c4522327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderManager\Shaders">
+      <UniqueIdentifier>{04fedc0e-0c4f-4fd6-924b-d79bb6a744c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle Physics\Fire">
+      <UniqueIdentifier>{ee128003-5081-439d-b9da-c54c34a3934a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BMPImage.cpp">
+      <Filter>BMPLoader %28James Kelly%29</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>BMPLoader %28James Kelly%29</Filter>
+    </ClCompile>
+    <ClCompile Include="cDungeonMeshBuilder.cpp">
+      <Filter>Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="cEntityBuilder.cpp">
+      <Filter>Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="sApproachState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sAttackState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sEnclosedWanderState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sExitMazeState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sFSMState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sIdleState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sWanderState.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClCompile>
+    <ClCompile Include="cListeningEnemy.cpp">
+      <Filter>Entities %28Objects%29\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="cPlayerEntity.cpp">
+      <Filter>Entities %28Objects%29\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="cWanderEnemy.cpp">
+      <Filter>Entities %28Objects%29\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="sFSMSystem.cpp">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System</Filter>
+    </ClCompile>
+    <ClCompile Include="cBedObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cBookshelfObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cChairObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cCrystal01Object.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cCrystal02Object.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cFootprints.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cTableObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cTorchObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cTreasureObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cWardrobeObject.cpp">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="cFBO\cFBO.cpp">
+      <Filter>FBO %28Frame Buffer Object%29</Filter>
+    </ClCompile>
+    <ClCompile Include="FSMState.cpp">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GatherState.cpp">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClCompile>
+    <ClCompile Include="IdleState.cpp">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClCompile>
+    <ClCompile Include="ReturnState.cpp">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchState.cpp">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClCompile>
+    <ClCompile Include="cFSMEntity.cpp">
+      <Filter>Finite State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="FSMSystem.cpp">
+      <Filter>Finite State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="globalThings.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Shutdown.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="StartUp.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Graph Node Search</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphSearches.cpp">
+      <Filter>Graph Node Search</Filter>
+    </ClCompile>
+    <ClCompile Include="cGLFWKeyboadModifiers.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW_error_callback.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW_key_callback.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandling.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="cLightHelper.cpp">
+      <Filter>Light Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="cLightManager.cpp">
+      <Filter>Light Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="cMediator.cpp">
+      <Filter>Mediator</Filter>
+    </ClCompile>
+    <ClCompile Include="cMediator_Imp.cpp">
+      <Filter>Mediator</Filter>
+    </ClCompile>
+    <ClCompile Include="cVAOManager.cpp">
+      <Filter>Meshes\VAOManager</Filter>
+    </ClCompile>
+    <ClCompile Include="cMesh.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMapping\C24BitBMPpixel.cpp">
+      <Filter>Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMapping\cBasicTextureManager.cpp">
+      <Filter>Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMapping\CTextureFromBMP.cpp">
+      <Filter>Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="cShader.cpp">
+      <Filter>ShaderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="cShaderManager.cpp">
+      <Filter>ShaderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="cFireParticle.cpp">
+      <Filter>Particle Physics\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\cParticle.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\cParticleContact.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\cParticleContactResolver.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\cParticleForceRegistry.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\cParticleWorld.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\particle_constraints.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\particle_contact_generators.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\random_helpers.cpp">
+      <Filter>Particle Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawObject_function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Load_Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BMPImage.h">
+      <Filter>BMPLoader %28James Kelly%29</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>BMPLoader %28James Kelly%29</Filter>
+    </ClInclude>
+    <ClInclude Include="cDungeonMeshBuilder.h">
+      <Filter>Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="cEntityBuilder.h">
+      <Filter>Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="iEntity.h">
+      <Filter>Entities %28Objects%29</Filter>
+    </ClInclude>
+    <ClInclude Include="sApproachState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sAttackState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sEnclosedWanderState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sExitMazeState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sFSMState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sIdleState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sWanderState.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System\sStates</Filter>
+    </ClInclude>
+    <ClInclude Include="cListeningEnemy.h">
+      <Filter>Entities %28Objects%29\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlayerEntity.h">
+      <Filter>Entities %28Objects%29\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cWanderEnemy.h">
+      <Filter>Entities %28Objects%29\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="sFSMSystem.h">
+      <Filter>Entities %28Objects%29\Entities\Enemy FSM System</Filter>
+    </ClInclude>
+    <ClInclude Include="cBedObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cBookshelfObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cChairObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cCrystal01Object.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cCrystal02Object.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cFootprints.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cTableObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cTorchObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cTreasureObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cWardrobeObject.h">
+      <Filter>Entities %28Objects%29\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cFBO\cFBO.h">
+      <Filter>FBO %28Frame Buffer Object%29</Filter>
+    </ClInclude>
+    <ClInclude Include="FSMState.h">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClInclude>
+    <ClInclude Include="GatherState.h">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClInclude>
+    <ClInclude Include="IdleState.h">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClInclude>
+    <ClInclude Include="ReturnState.h">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchState.h">
+      <Filter>Finite State Machine\States %28A.I. Project Specific%29</Filter>
+    </ClInclude>
+    <ClInclude Include="cFSMEntity.h">
+      <Filter>Finite State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="FSMSystem.h">
+      <Filter>Finite State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="MapInfo.h">
+      <Filter>Finite State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="globalThings.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Graph Node Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Graph Node Search</Filter>
+    </ClInclude>
+    <ClInclude Include="GLCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLMCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cLightHelper.h">
+      <Filter>Light Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="cLightManager.h">
+      <Filter>Light Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="cMediator.h">
+      <Filter>Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="cMediator_Imp.h">
+      <Filter>Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="iMediator.h">
+      <Filter>Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="iMessage.h">
+      <Filter>Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="cVAOManager.h">
+      <Filter>Meshes\VAOManager</Filter>
+    </ClInclude>
+    <ClInclude Include="cMesh.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMapping\C24BitBMPpixel.h">
+      <Filter>Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMapping\cBasicTextureManager.h">
+      <Filter>Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMapping\CTextureFromBMP.h">
+      <Filter>Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="cShaderManager.h">
+      <Filter>ShaderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="cFireParticle.h">
+      <Filter>Particle Physics\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\cParticle.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\cParticleContact.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\cParticleContactResolver.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\cParticleForceRegistry.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\cParticleWorld.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\iParticleContactGenerator.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\iParticleForceGenerator.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\particle_constraints.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\particle_contact_generators.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physics\random_helpers.h">
+      <Filter>Particle Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="sVertex_types.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\fragShader_01.glsl">
+      <Filter>ShaderManager\Shaders</Filter>
+    </None>
+    <None Include="assets\shaders\geomShader.glsl">
+      <Filter>ShaderManager\Shaders</Filter>
+    </None>
+    <None Include="assets\shaders\vertShader_01.glsl">
+      <Filter>ShaderManager\Shaders</Filter>
+    </None>
+    <None Include="assets\The Catacombs of Horrendous Devastation 01 - Converted.tsv">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="assets\lights.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="assets\worldFile.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="assets\audio\audioList.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

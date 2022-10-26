@@ -1,0 +1,65 @@
+ModelFileName(extension) Position(x,y,z) Orientation(x,y,z) Scale(x,y,z) Colour(r,g,b,a) UseColour Light TextureOp TextureName1 Ratio1 TextureName2 Ratio2 TextureName3 Ratio3 DiscardTexture
+Camera(x,y,z) 50 5 50 1 0 0
+
+0
+
+SM_Env_Consoles_01_xyz_n_rgba_uv.ply -115 72.5 82.5 0 -90 0 1 1 1 244 244 244 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Consoles_Corner_01_xyz_n_rgba_uv.ply -120 72.5 72.5 0 -90 0 1 1 1 244 244 244 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Consoles_Corner_01_xyz_n_rgba_uv.ply -120 72.5 87.5 0 -90 0 -1 1 1 244 244 244 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -115 72.5 82.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -115 72.5 87.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -115 72.5 77.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -120 72.5 82.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -120 72.5 87.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -120 72.5 77.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -125 72.5 82.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -125 72.5 87.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -125 72.5 77.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -120 77.5 82.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -120 77.5 87.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -120 77.5 77.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -125 77.5 82.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -125 77.5 87.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Floor_01_xyz_n_rgba_uv.ply -125 77.5 77.5 0 -90 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+SM_Env_Construction_Wall_01_xyz_n_rgba_uv.ply -130 72.5 72.5 0 0 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Construction_Wall_01_xyz_n_rgba_uv.ply -120 72.5 87.5 0 -180 0 1 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+SM_Env_Construction_Wall_01_xyz_n_rgba_uv.ply -130 72.5 87.5 0 90 0 1.5 1 1 255 255 255 1 0 1 0 SpaceInteriors_Texture.bmp 1 null 0 null 0 null
+
+
+
+Quad_x3_2_sided_axial_imposter_base_on_XY_axis.ply 0 1 0 0 0 0 1 1 1 200 200 200 1 1 0 0 null 0 null 0 null 0 null
+
+Quad_x3_2_sided_axial_imposter_base_on_XY_axis.ply 0 1 0 0 90 0 1 1 1 255 0 200 1 1 0 0 null 0 null 0 null 0 null
+Quad_x3_2_sided_axial_imposter_base_on_XY_axis.ply 0 1 0 0 180 0 1 1 1 0 255 0 1 1 0 0 null 0 null 0 null 0 null
+Quad_x3_2_sided_axial_imposter_base_on_XY_axis.ply 0 1 0 0 270 0 1 1 1 0 0 255 1 1 0 0 null 0 null 0 null 0 null
+
+Quad_1_sided_aligned_on_XY_plane.ply 0 0 0 0 0 0 1 1 1 255 0 0 1 1 0 0 null 0 null 0 null 0 null
+Quad_1_sided_aligned_on_XY_plane.ply 0 1 0 0 0 0 1 1 1 255 0 0 1 0 0 0 null 0 null 0 null 0 null
+
+Quad_1_sided_aligned_on_XY_plane.ply 5 0.1 2.5 90 90 0 2.5 2.5 1 255 0 0 1 0 0 2 treads.bmp 1 null 0 null 0 treads.bmp
+
+dfk_stairs_wood_XYZ_N_RGBA_UV_transformed.ply -5 0 5 0 0 0 1 1 1 255 255 255 1 0 1 4 dfk_stairs_01_basecolor.bmp 1 dfk_stairs_01_normal.bmp 1 dfk_stairs_01_SmMetAO.bmp 0.3 null
+
+dfk_bed_single_01_XYZ_N_RGBA_UV_transformed.ply 5 0.1 5 0 180 0 1 1 1 244 0 0 1 0 1 4 dfk_bed_single_01_basecolor.bmp 1 dfk_bed_single_01_normal.bmp 1 dfk_bed_single_01_SmMetAO.bmp 0.3 null
+dfk_bed_single_01_XYZ_N_RGBA_UV_transformed.ply 7.5 0.1 5 0 180 0 1 1 1 244 0 0 1 0 1 0 dfk_bed_single_01_basecolor.bmp 1 dfk_bed_single_01_normal.bmp 0 dfk_bed_single_01_SmMetAO.bmp 0 null
+
+dfk_crystal_02_XYZ_N_RGBA_UV_transformed.ply -5 0 -10 0 0 0 2.5 2.5 2.5 255 0 0 1 0 1 4 dfk_crystal_blue_albedo.bmp 1 dfk_crystal_normal.bmp 1 dfk_crystal_SmMetAO 1 null
+dfk_crystal_02_XYZ_N_RGBA_UV_transformed.ply -10 0 -10 0 0 0 2.5 2.5 2.5 255 0 0 1 0 1 4 dfk_crystal_red_albedo.bmp 1 dfk_crystal_normal.bmp 1 dfk_crystal_SmMetAO 1 null
+dfk_crystal_02_XYZ_N_RGBA_UV_transformed.ply -15 0 -10 0 0 0 2.5 2.5 2.5 255 0 0 1 0 1 4 dfk_crystal_green_albedo.bmp 1 dfk_crystal_normal.bmp 1 dfk_crystal_SmMetAO 1 null
+dfk_crystal_02_XYZ_N_RGBA_UV_transformed.ply -20 0 -10 0 0 0 2.5 2.5 2.5 255 0 0 1 0 1 4 dfk_crystal_white_albedo.bmp 1 dfk_crystal_normal.bmp 1 dfk_crystal_SmMetAO 1 null
+dfk_crystal_02_XYZ_N_RGBA_UV_transformed.ply -25 0 -10 0 0 0 2.5 2.5 2.5 255 0 0 1 0 1 4 dfk_crystal_yellow_albedo.bmp 1 dfk_crystal_normal.bmp 1 dfk_crystal_SmMetAO 1 null
+
+dfk_chest_02_closed_XYZ_N_RGBA_UV_transformed.ply 2.5 0 5 0 0 0 1 1 1 255 0 0 1 0 1 4 dfk_small_containers_blue_basecolor.bmp 1 dfk_small_containers_normal.bmp 1 dfk_small_containers_SmMetAO.bmp 0.3 null
+
+Pokemon.ply 0 0 10 0 0 0 0.01 0.01 0.01 244 0 0 1 0 1 4 Final_Pokemon_Diffuse.bmp 1 Final_Pokemon_Normal.bmp 1 Final_Pokemon_Ambient_Occlusion.bmp 0.3 null
+
+Isosphere_Smooth_Normals.ply 1000 1000 1000 0 0 0 1 1 1 255 0 0 1 1 0 0 null 0 null 0 null 0 null
+
+end
