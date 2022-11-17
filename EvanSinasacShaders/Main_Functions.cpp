@@ -22,22 +22,37 @@ void SpawnEntities(std::vector<Node*> spawnPoints)
 	cEntityBuilder entityBuilder;
 	for (unsigned int index = 0; index != spawnPoints.size(); index++)
 	{
-		if (spawnPoints[index]->type == "E")	// spawn an enemy
+		if (spawnPoints[index]->type == "E" ||
+			spawnPoints[index]->type == "EL" ||
+			spawnPoints[index]->type == "EW")	// spawn an enemy
 		{
-			int random = rand() % 2;
 			iEntity* enemy;
-			switch (random)
+			if (spawnPoints[index]->type == "EL")
 			{
-			case 0:
-				enemy = entityBuilder.MakeEntity(cEntityBuilder::TypeOfEntity::WANDER_ENEMY,
-					spawnPoints[index]->position, spawnPoints[index]);
-				break;
-			case 1:
 				enemy = entityBuilder.MakeEntity(cEntityBuilder::TypeOfEntity::LISTEN_ENEMY,
 					spawnPoints[index]->position, spawnPoints[index]);
-				break;
-			default:
-				break;
+			}
+			else if (spawnPoints[index]->type == "EW")
+			{
+				enemy = entityBuilder.MakeEntity(cEntityBuilder::TypeOfEntity::WANDER_ENEMY,
+					spawnPoints[index]->position, spawnPoints[index]);
+			}
+			else
+			{
+				int random = rand() % 2;
+				switch (random)
+				{
+				case 0:
+					enemy = entityBuilder.MakeEntity(cEntityBuilder::TypeOfEntity::WANDER_ENEMY,
+						spawnPoints[index]->position, spawnPoints[index]);
+					break;
+				case 1:
+					enemy = entityBuilder.MakeEntity(cEntityBuilder::TypeOfEntity::LISTEN_ENEMY,
+						spawnPoints[index]->position, spawnPoints[index]);
+					break;
+				default:
+					break;
+				}
 			}
 			::vec_pAllEntities.push_back(enemy);
 			::vec_pEnemies.push_back(enemy);
@@ -162,6 +177,20 @@ bool loadTSVGrid(std::vector<Node*> spawnPoints, std::string fileName)
 						x++;
 						grid[x][y] = nextLetter;
 					}
+				}
+				else
+				{
+					//std::cout << grid[x][y] << " ";
+					x++;
+					grid[x][y] = nextLetter;
+				}
+			}
+			else if (nextLetter == "E")
+			{
+				nextLetter = theFile.get();
+				if (nextLetter == "W" || nextLetter == "L")
+				{
+					grid[x][y].append(nextLetter);
 				}
 				else
 				{
@@ -392,6 +421,8 @@ bool loadTSVGrid(std::vector<Node*> spawnPoints, std::string fileName)
 			}	// end of stairs
 			else if (	grid[x][y] == "F" || 
 						grid[x][y] == "E" ||
+						grid[x][y] == "EW" ||
+						grid[x][y] == "EL" ||
 						grid[x][y] == "T" ||
 						grid[x][y] == "O")		// regular floor, check and place walls if necessarry. spawnpoints will be handled as well
 			{
@@ -469,7 +500,7 @@ bool loadTSVGrid(std::vector<Node*> spawnPoints, std::string fileName)
 				{
 					Node* temp = ::g_Graph->CreateNode(nodeID, glm::vec3(newMesh->positionXYZ.x, newMesh->positionXYZ.y + 0.75f, newMesh->positionXYZ.z),
 						grid[x][y], false, false, false);
-					if (grid[x][y] == "E" || grid[x][y] == "T" || grid[x][y] == "O")
+					if (grid[x][y] == "E" || grid[x][y] == "EW" || grid[x][y] == "EL" || grid[x][y] == "T" || grid[x][y] == "O")
 						spawnPoints.push_back(temp);
 				}
 				//else if (grid[x][y] == "FS")
