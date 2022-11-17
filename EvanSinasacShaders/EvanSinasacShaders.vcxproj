@@ -286,10 +286,11 @@
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\maps\Simple.tsv" />
+    <None Include="assets\maps\The Catacombs of Horrendous Devastation 01 - Converted.tsv" />
     <None Include="assets\shaders\fragShader_01.glsl" />
     <None Include="assets\shaders\geomShader.glsl" />
     <None Include="assets\shaders\vertShader_01.glsl" />
-    <None Include="assets\The Catacombs of Horrendous Devastation 01 - Converted.tsv" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="assets\audio\audioList.txt" />

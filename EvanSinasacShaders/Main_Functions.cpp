@@ -107,13 +107,14 @@ void SpawnEntities(std::vector<Node*> spawnPoints)
 	}
 }
 
-bool loadTSVGrid(std::vector<Node*> spawnPoints)
+bool loadTSVGrid(std::vector<Node*> spawnPoints, std::string fileName)
 {
 	cDungeonMeshBuilder main_DungeonBuilder;
 	float scale = 1.0f;			// not sure if I need this, I don't think I do
 	std::stringstream ss;
 	//ss << SOLUTION_DIR << "common\\assets\\The Catacombs of Horrendous Devastation 01 - Converted.tsv";
-	ss << "assets\\The Catacombs of Horrendous Devastation 01 - Converted.tsv";
+	ss << "assets\\maps\\" << fileName;// The Catacombs of Horrendous Devastation 01 - Converted.tsv";
+	
 	std::ifstream theFile(ss.str());
 
 	std::string grid[51][65];
@@ -121,6 +122,7 @@ bool loadTSVGrid(std::vector<Node*> spawnPoints)
 	if (!theFile.is_open())
 	{
 		std::cout << "The tsv file didn't open!" << std::endl;
+		return false;
 	}
 	std::string nextLetter;
 	for (unsigned int y = 0; y < 65; y++)

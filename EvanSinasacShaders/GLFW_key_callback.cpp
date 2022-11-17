@@ -127,14 +127,14 @@ bool bShowAllLights = false;
     }
 
     // Begin cheating (move the player to the exit)
-    //if (key == GLFW_KEY_K && action == GLFW_PRESS)
-    //{
-    //    if (!((cPlayerEntity*)::g_pPlayer)->cheating)
-    //        ((cPlayerEntity*)::g_pPlayer)->StartCheating();
-    //}
+    if (key == GLFW_KEY_K && action == GLFW_PRESS)
+    {
+        if (!((cPlayerEntity*)::g_pPlayer)->cheating)
+            ((cPlayerEntity*)::g_pPlayer)->StartCheating();
+    }
 
     // Move player around the graph
-    /*if (key == GLFW_KEY_UP && action == GLFW_PRESS)
+    if (key == GLFW_KEY_UP && action == GLFW_PRESS)
     {
         if (!((cPlayerEntity*)::g_pPlayer)->cheating)
             ((cPlayerEntity*)::g_pPlayer)->Move("FORWARD");
@@ -153,7 +153,7 @@ bool bShowAllLights = false;
     {
         if (!((cPlayerEntity*)::g_pPlayer)->cheating)
             ((cPlayerEntity*)::g_pPlayer)->Rotate("RIGHT");
-    }*/
+    }
     
     // Update the Full screen FBO resolution
     //if (key == GLFW_KEY_P && action == GLFW_PRESS)

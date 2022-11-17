@@ -1,0 +1,19 @@
+-	Wall
+
+F	Floor
+
+SUU
+SU	Stairs Up (player spawn)
+
+SD
+SDD	Stairs Down (goal)
+
+O	Furniture Spawn (random furniture)
+
+T	Treasure Spawn
+
+E	Enemy Spawn
+
+TODO:
+EW	Wander Enemy Spawn
+EL	Listen Enemy Spawn

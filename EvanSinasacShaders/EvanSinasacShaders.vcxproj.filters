@@ -487,7 +487,10 @@
     <None Include="assets\shaders\vertShader_01.glsl">
       <Filter>ShaderManager\Shaders</Filter>
     </None>
-    <None Include="assets\The Catacombs of Horrendous Devastation 01 - Converted.tsv">
+    <None Include="assets\maps\Simple.tsv">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="assets\maps\The Catacombs of Horrendous Devastation 01 - Converted.tsv">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

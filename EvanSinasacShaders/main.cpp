@@ -118,7 +118,7 @@ bool loadDefaultSkyBox();
 bool initFMOD();
 bool loadSounds();
 
-bool loadTSVGrid(std::vector<Node*> spawnPoints);			// modified version from Graphics 1 Final
+bool loadTSVGrid(std::vector<Node*> spawnPoints, std::string fileName);			// modified version from Graphics 1 Final
 void SpawnSinglePlayer();
 
 // AI Project 3
@@ -490,17 +490,18 @@ int main(int argv, char** argc)
 	//        
 
 	// This loads the dungeons and necessary models
-	//if (loadTSVGrid(spawnPoints))
-	//{
-	//	std::cout << "loadTSVGrid finished OK" << std::endl;
-	//}
-	//else
-	//{
-	//	std::cout << "loadTSVGrid did not finish OK, aborting!" << std::endl;
-	//	return -1;
-	//}
+	//if (loadTSVGrid(spawnPoints, "The Catacombs of Horrendous Devastation 01 - Converted.tsv"))
+	if (loadTSVGrid(spawnPoints, "Simple.tsv"))
+	{
+		std::cout << "loadTSVGrid finished OK" << std::endl;
+	}
+	else
+	{
+		std::cout << "loadTSVGrid did not finish OK, aborting!" << std::endl;
+		return -1;
+	}
 
-	SpawnSinglePlayer();
+	//SpawnSinglePlayer();
 	
 
 	////World file stuff here
