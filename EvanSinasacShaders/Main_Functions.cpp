@@ -1385,6 +1385,81 @@ void SpawnSinglePlayer()
 }
 
 
+void UpdateSun(cMesh* sunMesh, double deltaTime)
+{
+	float constexpr slice = 2.0f * glm::pi<float>() / 360.0f;
+	glm::vec3 centerPos = glm::vec3(50.0f, 0.0f, 100.0f);
+	float radius = 100.0f;
+	glm::vec3 curPos = sunMesh->positionXYZ;
+
+	float numerator = curPos.z - centerPos.z;
+	float denominator = curPos.y - centerPos.y;
+
+	if (glm::abs(numerator) <= 0.1f) 		// vertical line
+	{
+		if (curPos.y > 0.0f)
+		{
+			//std::cout << "Sun at Noon" << std::endl;
+			sunMesh->positionXYZ = glm::vec3(50.0f,
+				radius * cos(slice) + centerPos.y,
+				radius * sin(slice) + centerPos.z);
+		}
+		else if (curPos.y < 0.0f)
+		{
+			//std::cout << "Sun at midnight" << std::endl;
+			sunMesh->positionXYZ = glm::vec3(50.0f,
+				radius * cos(slice * 181.0f ) + centerPos.y,
+				radius * sin(slice * 181.0f)  + centerPos.z);
+		}
+		else
+		{
+			std::cout << "How the Y did we get here?" << std::endl;
+		}
+	}
+	else if (glm::abs(denominator) <= 0.1f)	// horizontal line
+	{
+		if (curPos.z > centerPos.z)
+		{
+			//std::cout << "Sun in east" << std::endl;
+			sunMesh->positionXYZ = glm::vec3(50.0f,
+				(radius * cos(slice * 91.0f)  + centerPos.y) ,
+				(radius * sin(slice * 91.0f) + centerPos.z) );
+		}
+		else if (curPos.z < centerPos.z)
+		{
+			//std::cout << "Sun in west" << std::endl;
+			sunMesh->positionXYZ = glm::vec3(50.0f,
+				(radius * cos(slice * 271.0f) + centerPos.y),
+				(radius * sin(slice * 271.0f) + centerPos.z));
+		}
+		else
+		{
+			std::cout << "How the Z did we get here?" << std::endl;
+		}
+	}
+	else									// everything in between
+	{
+		float slopeAB = numerator / denominator;
+		float curAngle = atanf(slopeAB);	// returns values between [ -pi/2 and pi/2 ] radians
+		// which works in terms of a sun/light moving in the positive hemisphere, but for this I just wanted to see it go all the way around the circle
+
+		//curAngle += slice;	kinda fast but works
+		curAngle += slice * (float)deltaTime * 10.0f;
+
+		if (curPos.y < 0.0f)	// take this out if I want to just do the upper hemisphere, or make it always work to do just the lower hemisphere
+			curAngle = glm::pi<float>() + curAngle;
+
+			
+		sunMesh->positionXYZ = glm::vec3(50.0f,
+			radius * cos(curAngle) + centerPos.y,
+			radius * sin(curAngle) + centerPos.z);
+		
+	}
+
+	return;
+}
+
+
 // Don't think I'm using this keeping it for reference
 
 //void MakeGraphAndMeshes()

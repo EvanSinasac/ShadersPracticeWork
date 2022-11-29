@@ -294,8 +294,12 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="assets\audio\audioList.txt" />
-    <Text Include="assets\lights.txt" />
-    <Text Include="assets\worldFile.txt" />
+    <Text Include="assets\lights\lights.txt" />
+    <Text Include="assets\lights\simpleLights.txt" />
+    <Text Include="assets\lights\worldLightsPos.txt" />
+    <Text Include="assets\maps\Legend.txt" />
+    <Text Include="assets\worlds\worldFile.txt" />
+    <Text Include="assets\worlds\worldFile_Test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

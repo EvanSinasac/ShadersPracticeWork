@@ -100,8 +100,8 @@ void DrawObject(
 void DrawScene1(GLuint program);
 void DrawSceneWithDistanceLimit(GLuint program, glm::vec3 viewPos);
 
-bool loadWorldFile(unsigned int& numberOfTransparentObjects);
-bool loadLightsFile();
+bool loadWorldFile(unsigned int& numberOfTransparentObjects, std::string fileName);
+bool loadLightsFile(std::string fileName);
 
 void loadGraphicsMidtermModels(std::vector<std::string>& modelLocations);
 void loadGraphicsProject2Models(std::vector<std::string>& modelLocations);
@@ -120,6 +120,9 @@ bool loadSounds();
 
 bool loadTSVGrid(std::vector<Node*> spawnPoints, std::string fileName);			// modified version from Graphics 1 Final
 void SpawnSinglePlayer();
+
+
+void UpdateSun(cMesh* sunMesh, double deltaTime);
 
 // AI Project 3
 //char GetColourCharacter(unsigned char r, unsigned char g, unsigned char b);
@@ -418,7 +421,8 @@ int main(int argv, char** argc)
 	// might be something in the shader
 
 	// loads all the lights from a file instead of individually setting them here
-	if (loadLightsFile())
+	//if (loadLightsFile("lights.txt"))
+	if (loadLightsFile("simpleLights.txt"))
 	{
 		std::cout << "loadLightsFile finished ok!" << std::endl;
 	}
@@ -505,7 +509,7 @@ int main(int argv, char** argc)
 	
 
 	////World file stuff here
-	if (loadWorldFile(numberOfTransparentObjects))
+	if (loadWorldFile(numberOfTransparentObjects, "worldFile.txt"))
 	{
 		std::cout << "loadWorldFile finished OK" << std::endl;
 	}
@@ -593,7 +597,42 @@ int main(int argv, char** argc)
 	// also, I didn't realize the "screens" were already placed in the right spots (at least for the main console)
 	// and I just figured out where to move them to in mesh lab and applied the transform here
 	
+
+	cMesh* sunArcSphereMesh = new cMesh();
+	sunArcSphereMesh->meshName = "Isosphere_Smooth_Normals.ply";
+	sunArcSphereMesh->friendlyName = "Sun Arc";
+	sunArcSphereMesh->positionXYZ = glm::vec3(50.0f, 0.0f, 100.0f);
+	sunArcSphereMesh->orientationXYZ = glm::vec3(0.0f);
+	sunArcSphereMesh->setUniformScale(100.0f);
+	sunArcSphereMesh->bIsWireframe = true;
+	sunArcSphereMesh->bDontLight = true;
+	sunArcSphereMesh->bUseObjectDebugColour = true;
+	sunArcSphereMesh->objectDebugColourRGBA = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
+	sunArcSphereMesh->bUseWholeObjectDiffuseColour = true;
+	sunArcSphereMesh->wholeObjectDiffuseRGBA = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
+	sunArcSphereMesh->clearTextureRatiosToZero();
+	sunArcSphereMesh->textureOperator = 0;
+	sunArcSphereMesh->textureRatios[1] = 0.0f;
+	sunArcSphereMesh->bIsVisible = false;
+
+	cMesh* sunSphereMesh = new cMesh();
+	sunSphereMesh->meshName = "Isosphere_Smooth_Normals.ply";
+	sunSphereMesh->friendlyName = "Sun";
+	sunSphereMesh->positionXYZ = glm::vec3(50.0f, 100.0f, 100.0f);
+	sunSphereMesh->orientationXYZ = glm::vec3(0.0f);
+	sunSphereMesh->setUniformScale(1.0);
+	sunSphereMesh->bIsWireframe = true;
+	sunSphereMesh->bDontLight = true;
+	sunSphereMesh->bUseObjectDebugColour = true;
+	sunSphereMesh->objectDebugColourRGBA = glm::vec4(1.0f, 1.0f, 0.0f, 1.0f);
+	sunSphereMesh->bUseWholeObjectDiffuseColour = true;
+	sunSphereMesh->wholeObjectDiffuseRGBA = glm::vec4(1.0f, 1.0f, 0.0f, 1.0f);
+	sunSphereMesh->clearTextureRatiosToZero();
+	sunSphereMesh->textureOperator = 0;
+	sunSphereMesh->textureRatios[1] = 0.0f;
 	
+	::g_vec_pMeshes.push_back(sunArcSphereMesh);
+	::g_vec_pMeshes.push_back(sunSphereMesh);
 
 	//    _______ ________   _________ _    _ _____  ______  _____ 
 	//   |__   __|  ____\ \ / /__   __| |  | |  __ \|  ____|/ ____|
@@ -865,6 +904,15 @@ int main(int argv, char** argc)
 		}
 
 		::g_pWorld->TimeStep((float)deltaTime);
+
+		UpdateSun(sunSphereMesh, deltaTime);
+
+		{	// update lighting
+			::g_pTheLights->theLights[0].position = glm::vec4(sunSphereMesh->positionXYZ, 1.0f);
+			glm::vec3 directionToCenter = sunArcSphereMesh->positionXYZ - sunSphereMesh->positionXYZ;
+			directionToCenter = glm::normalize(directionToCenter);
+			::g_pTheLights->theLights[0].direction = glm::vec4(directionToCenter, 1.0f);
+		}	// honestly, looks good, kinda fun to implement, just shows there's something wrong with the dfk models' normals lmao
 
 		// cam 1 and 2 texture change	// camera 1 no longer changes textures, but still flickers
 		//if (cam1Timer >= cam1Tim)

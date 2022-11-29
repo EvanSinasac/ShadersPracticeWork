@@ -79,6 +79,21 @@
     <Filter Include="Particle Physics\Fire">
       <UniqueIdentifier>{ee128003-5081-439d-b9da-c54c34a3934a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Assets Text Files">
+      <UniqueIdentifier>{c0721f3b-1a21-447e-aef5-316e724af1ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Assets Text Files\audio">
+      <UniqueIdentifier>{9af00164-f494-45fd-8c6f-ae8edaa304c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Assets Text Files\lights">
+      <UniqueIdentifier>{36ec0415-3f4e-4966-9710-2a942b181ba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Assets Text Files\maps">
+      <UniqueIdentifier>{e6055001-4be2-4cff-b7b5-169e4579f06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Assets Text Files\worlds">
+      <UniqueIdentifier>{bd3ad54e-096a-488a-ae04-54d79082192e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BMPImage.cpp">
@@ -488,21 +503,33 @@
       <Filter>ShaderManager\Shaders</Filter>
     </None>
     <None Include="assets\maps\Simple.tsv">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Assets Text Files\maps</Filter>
     </None>
     <None Include="assets\maps\The Catacombs of Horrendous Devastation 01 - Converted.tsv">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Assets Text Files\maps</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="assets\lights.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="assets\worldFile.txt">
-      <Filter>Source Files</Filter>
-    </Text>
     <Text Include="assets\audio\audioList.txt">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Assets Text Files\audio</Filter>
+    </Text>
+    <Text Include="assets\maps\Legend.txt">
+      <Filter>Source Files\Assets Text Files\maps</Filter>
+    </Text>
+    <Text Include="assets\lights\lights.txt">
+      <Filter>Source Files\Assets Text Files\lights</Filter>
+    </Text>
+    <Text Include="assets\lights\simpleLights.txt">
+      <Filter>Source Files\Assets Text Files\lights</Filter>
+    </Text>
+    <Text Include="assets\lights\worldLightsPos.txt">
+      <Filter>Source Files\Assets Text Files\lights</Filter>
+    </Text>
+    <Text Include="assets\worlds\worldFile.txt">
+      <Filter>Source Files\Assets Text Files\worlds</Filter>
+    </Text>
+    <Text Include="assets\worlds\worldFile_Test.txt">
+      <Filter>Source Files\Assets Text Files\worlds</Filter>
     </Text>
   </ItemGroup>
 </Project>

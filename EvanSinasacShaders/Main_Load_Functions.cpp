@@ -6,14 +6,15 @@
 #include "cTorchObject.h"
 
 // Modified from previous versions to take texture information
-bool loadWorldFile(unsigned int& numberOfTransparentObjects)
+bool loadWorldFile(unsigned int& numberOfTransparentObjects, std::string fileName)
 {
 	std::stringstream ss;
 	std::stringstream sFile;
 
 
 	//ss << SOLUTION_DIR << "common\\assets\\worldFile.txt";
-	ss << "assets\\worldFile.txt";
+	//ss << "assets\\worldFile.txt";
+	ss << "assets\\worlds\\" << fileName;	// worldFile.txt";
 
 	std::ifstream theFile(ss.str());
 
@@ -179,7 +180,7 @@ bool loadWorldFile(unsigned int& numberOfTransparentObjects)
 	return true;
 }	//end of load world file
 
-bool loadLightsFile()
+bool loadLightsFile(std::string fileName)
 {
 	cDungeonMeshBuilder main_DungeonBuilder;
 	std::stringstream ss;
@@ -188,13 +189,14 @@ bool loadLightsFile()
 	//std::vector<float> rotations;
 
 	//ss << SOLUTION_DIR << "common\\assets\\lights.txt";
-	ss << "assets\\lights.txt";
+	//ss << "assets\\lights\\lights.txt";
+	ss << "assets\\lights\\" << fileName;// lights.txt";
 
 	std::ifstream theFile(ss.str());
 
 	if (!theFile.is_open())
 	{
-		fprintf(stderr, "Could not open lights.txr");
+		fprintf(stderr, "Could not open lights.txt");
 		return false;
 	}
 
