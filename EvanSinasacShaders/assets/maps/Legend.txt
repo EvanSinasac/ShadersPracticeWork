@@ -17,3 +17,6 @@ E	Enemy Spawn
 EW	Wander Enemy Spawn
 
 EL	Listen Enemy Spawn
+
+
+Camera(x,y,z) -125 75 80 1 0 0

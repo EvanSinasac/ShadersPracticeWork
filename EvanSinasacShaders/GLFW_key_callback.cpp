@@ -47,6 +47,7 @@ bool bShowAllLights = false;
     // Change all models to wireframe
     if (key == GLFW_KEY_M && action == GLFW_PRESS)
     {
+        // TODO: Make a function that makes a list or queue and adds children to it rather than doing these nested for loops
         for (std::vector<cMesh*>::iterator it = ::g_vec_pMeshes.begin();
             it != ::g_vec_pMeshes.end(); it++)
         {
@@ -171,14 +172,16 @@ bool bShowAllLights = false;
         }
         switch (::g_Mode)
         {
-        case 0:
+        case 0: // free roam fly camera
             ::g_ObservationMode = true;
             ::g_FirstPersonMode = false;
             ::g_OverheadMode = false;
             ::cameraEye = ::lastCamPosition;
             ::cameraTarget = ::lastCamLookAt;
+
+            ::g_pTheLights->TurnOnLight(1);
             break;
-        case 1:
+        case 1: // first person mode to the player model
             ::g_ObservationMode = false;
             ::g_FirstPersonMode = true;
             ::g_OverheadMode = false;
@@ -187,14 +190,18 @@ bool bShowAllLights = false;
             // set cameraEye and cameraTarget to player position
             ::cameraEye = ((cPlayerEntity*)::g_pPlayer)->position;
             ::cameraTarget = ((cPlayerEntity*)::g_pPlayer)->lookAt;
+
+            ::g_pTheLights->TurnOffLight(1);
             break;
-        case 2:
+        case 2: // overhead of the player model
             ::g_ObservationMode = false;
             ::g_FirstPersonMode = false;
             ::g_OverheadMode = true;
             // set cameraEye and cameraTarget to above
             ::cameraEye = ((cPlayerEntity*)::g_pPlayer)->position + glm::vec3(0.0f, 15.0f, 0.0f);
             ::cameraTarget = glm::vec3(0.0f, -1.0f, 0.0f);
+
+            ::g_pTheLights->TurnOffLight(1);
             break;
         default:
             break;

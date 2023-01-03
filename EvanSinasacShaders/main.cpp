@@ -1635,6 +1635,10 @@ int main(int argv, char** argc)
 					((cPlayerEntity*)::g_pPlayer)->position.z);
 				::cameraTarget = normLookAt;
 			}
+
+			::g_pTheLights->theLights[1].position = glm::vec4(((cPlayerEntity*)::g_pPlayer)->position.x,
+				((cPlayerEntity*)::g_pPlayer)->position.y + 18.0f,
+				((cPlayerEntity*)::g_pPlayer)->position.z, 1.0f);
 			//else
 			//{
 			matView = glm::lookAt(::cameraEye,

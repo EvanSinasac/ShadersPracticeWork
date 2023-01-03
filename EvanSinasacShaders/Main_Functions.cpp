@@ -1444,7 +1444,7 @@ void UpdateSun(cMesh* sunMesh, double deltaTime)
 		// which works in terms of a sun/light moving in the positive hemisphere, but for this I just wanted to see it go all the way around the circle
 
 		//curAngle += slice;	kinda fast but works
-		curAngle += slice * (float)deltaTime * 10.0f;
+		curAngle += slice * (float)deltaTime * 10.0f;	// 10 is speed, could make a variable but eh, why bother other than to make it slightly easier to find
 
 		if (curPos.y < 0.0f)	// take this out if I want to just do the upper hemisphere, or make it always work to do just the lower hemisphere
 			curAngle = glm::pi<float>() + curAngle;
